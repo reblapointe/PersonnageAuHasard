@@ -41,7 +41,7 @@ namespace PersonnageAuHasard
 					personnage2Description = "Zombie"; 
 					break;
 				default:
-                    personnage1Description = " erreur dans le switch du personnage";
+                    personnage2Description = " erreur dans le switch du personnage";
                     break;
 			}
 
@@ -57,7 +57,7 @@ namespace PersonnageAuHasard
 					personnage3Description = "Zombie"; 
 					break;
 				default:
-                    personnage1Description = " erreur dans le switch du personnage";
+                    personnage3Description = " erreur dans le switch du personnage";
                     break;
 			}
 
