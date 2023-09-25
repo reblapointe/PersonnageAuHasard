@@ -23,7 +23,7 @@ namespace PersonnageAuHasard
 					personnage1Description = "Zombie"; 
 					break;
 				default: 
-					Console.WriteLine(" erreur dans le switch du personnage"); 
+					personnage1Description = " erreur dans le switch du personnage"; 
 					break;
 			}
 
@@ -38,9 +38,9 @@ namespace PersonnageAuHasard
 				case 3: 
 					personnage2Description = "Zombie"; 
 					break;
-				default: 
-					Console.WriteLine(" erreur dans le switch du personnage"); 
-					break;
+				default:
+                    personnage1Description = " erreur dans le switch du personnage";
+                    break;
 			}
 
 			switch (personnage3)
@@ -54,9 +54,9 @@ namespace PersonnageAuHasard
 				case 3: 
 					personnage3Description = "Zombie"; 
 					break;
-				default: 
-					Console.WriteLine(" erreur dans le switch du personnage"); 
-					break;
+				default:
+                    personnage1Description = " erreur dans le switch du personnage";
+                    break;
 			}
 
 			Console.WriteLine($"Les trois personnages pigés sont {personnage1Description}, {personnage2Description} et {personnage3Description}");
