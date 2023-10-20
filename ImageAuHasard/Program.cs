@@ -6,6 +6,10 @@ namespace PersonnageAuHasard
     {
 		const int NB_TYPES_PERSONNAGES = 3;
 
+        /// <summary>
+        /// Retourne un personnage au hasard
+        /// </summary>
+        /// <returns>Un personnage au hasard</returns>
 		static string DecrirePersonnage()
         {
             Random generateur = new Random();
