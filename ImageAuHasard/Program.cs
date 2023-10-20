@@ -6,62 +6,40 @@ namespace PersonnageAuHasard
     {
 		const int NB_TYPES_PERSONNAGES = 3;
 
+		static string DecrirePersonnage()
+        {
+            Random generateur = new Random();
+            int personnage = generateur.Next(NB_TYPES_PERSONNAGES);
+            string personnageDescription;
+            switch (personnage)
+            {
+                case 0:
+                    personnageDescription = "Sorcière";
+                    break;
+                case 1:
+                    personnageDescription = "Robot";
+                    break;
+                case 2:
+                    personnageDescription = "Zombie";
+                    break;
+                default:
+                    personnageDescription = "Erreur dans le switch du personnage";
+                    break;
+            }
+			return personnageDescription;
+        }
+
         static void Main(string[] args)
         {
-			Random generateur = new Random();
-			int personnage1 = generateur.Next(NB_TYPES_PERSONNAGES);
-			int personnage2 = generateur.Next(NB_TYPES_PERSONNAGES);
-			int personnage3 = generateur.Next(NB_TYPES_PERSONNAGES);
-			string personnage1Description = "", personnage2Description = "", personnage3Description = "";
-			switch (personnage1)
-			{
-				case 0: 
-					personnage1Description = "Sorcière"; 
-					break;
-				case 1: 
-					personnage1Description = "Robot"; 
-					break;
-				case 2: 
-					personnage1Description = "Zombie"; 
-					break;
-				default: 
-					personnage1Description = "Erreur dans le switch du personnage"; 
-					break;
-			}
+            string personnage1Description;
+            string personnage2Description;
+            string personnage3Description;
 
-			switch (personnage2)
-			{
-				case 0: 
-					personnage2Description = "Sorcière"; 
-					break;
-				case 1: 
-					personnage2Description = "Robot"; 
-					break;
-				case 2: 
-					personnage2Description = "Zombie"; 
-					break;
-				default:
-                    personnage2Description = "Erreur dans le switch du personnage";
-                    break;
-			}
+            personnage1Description = DecrirePersonnage();
+            personnage2Description = DecrirePersonnage();
+            personnage3Description = DecrirePersonnage();
 
-			switch (personnage3)
-			{
-				case 0: 
-					personnage3Description = "Sorcière"; 
-					break;
-				case 1: 
-					personnage3Description = "Robot"; 
-					break;
-				case 2: 
-					personnage3Description = "Zombie"; 
-					break;
-				default:
-                    personnage3Description = "Erreur dans le switch du personnage";
-                    break;
-			}
-
-			Console.WriteLine($"Les trois personnages pigés sont {personnage1Description}, {personnage2Description} et {personnage3Description}");
+            Console.WriteLine($"Les trois personnages pigés sont {personnage1Description}, {personnage2Description} et {personnage3Description}");
 		}
 	}
 }
