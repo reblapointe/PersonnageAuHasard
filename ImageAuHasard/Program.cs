@@ -6,9 +6,9 @@ namespace PersonnageAuHasard
     {
 		const int NB_TYPES_PERSONNAGES = 3;
 
-		static string DecrirePersonnage()
+		public static void Main(string[] _)
         {
-			Random generateur = new Random();
+			Random generateur = new ();
 			int personnage1 = generateur.Next(NB_TYPES_PERSONNAGES);
 			int personnage2 = generateur.Next(NB_TYPES_PERSONNAGES);
 			int personnage3 = generateur.Next(NB_TYPES_PERSONNAGES);
