@@ -13,6 +13,11 @@ namespace PersonnageAuHasard
             Console.WriteLine($"Vos trois personnages sont {personnage1}, {personnage2} et {personnage3}");
         }
 
+        /// <summary>
+        /// Permet à l'utilisateur de choisir un type de personnage parmis une liste valide.
+        /// </summary>
+        /// <param name="position">Numérotation dupersonnage.</param>
+        /// <returns>Un type de personnage validé.</returns>
         private static string ChoisirPersonnage(string position)
         {
             string personnage;
