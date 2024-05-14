@@ -4,65 +4,102 @@ namespace PersonnageAuHasard
 {
     class Program
     {
-        const int NB_TYPES_PERSONNAGES = 3;
-
         public static void Main(string[] _)
         {
-            Random generateur = new();
-            int personnage1 = generateur.Next(NB_TYPES_PERSONNAGES);
-            int personnage2 = generateur.Next(NB_TYPES_PERSONNAGES);
-            int personnage3 = generateur.Next(NB_TYPES_PERSONNAGES);
-            string personnage1Description = "", personnage2Description = "", personnage3Description = "";
-
-            switch (personnage1)
+            string personnage1;
+            bool personnage1Valide;
+            do
             {
-                case 0:
-                    personnage1Description = "Sorcière";
-                    break;
-                case 1:
-                    personnage1Description = "Robot";
-                    break;
-                case 2:
-                    personnage1Description = "Zombie";
-                    break;
-                default:
-                    personnage1Description = " erreur dans le switch du personnage";
-                    break;
-            }
+                personnage1Valide = true;
+                Console.WriteLine("Quel est le type du premier personnage? (R)obot, (S)orcière ou (Z)ombie?");
+                personnage1 = Console.ReadLine() ?? string.Empty;
+                personnage1 = personnage1.ToUpper().Trim();
+                switch (personnage1)
+                {
+                    case "R":
+                    case "ROBOT":
+                        personnage1 = "Robot";
+                        break;
+                    case "Z":
+                    case "ZOMBIE":
+                        personnage1 = "Zombie";
+                        break;
+                    case "S":
+                    case "SORCIÈRE":
+                    case "SORCIERE":
+                        personnage1 = "Sorcière";
+                        break;
+                    default:
+                        Console.WriteLine(personnage1 + " n'est pas un personnage valide.");
+                        personnage1Valide = false;
+                        break;
+                }
+            } while (!personnage1Valide);
 
-            switch (personnage2)
+
+
+            string personnage2;
+            bool personnage2Valide;
+            do
             {
-                case 0:
-                    personnage2Description = "Sorcière";
-                    break;
-                case 1:
-                    personnage2Description = "Robot";
-                    break;
-                case 2:
-                    personnage2Description = "Zombie";
-                    break;
-                default:
-                    personnage2Description = " erreur dans le switch du personnage";
-                    break;
-            }
+                personnage2Valide = true;
+                Console.WriteLine("Quel est le type du deuxième personnage? (R)obot, (S)orcière ou (Z)ombie?");
+                personnage2 = Console.ReadLine() ?? string.Empty;
+                personnage2 = personnage2.ToUpper().Trim();
+                switch (personnage2)
+                {
+                    case "R":
+                    case "ROBOT":
+                        personnage2 = "Robot";
+                        break;
+                    case "Z":
+                    case "ZOMBIE":
+                        personnage2 = "Zombie";
+                        break;
+                    case "S":
+                    case "SORCIÈRE":
+                    case "SORCIERE":
+                        personnage2 = "Sorcière";
+                        break;
+                    default:
+                        Console.WriteLine(personnage2 + " n'est pas un personnage valide.");
+                        personnage2Valide = false;
+                        break;
+                }
+            } while (!personnage2Valide);
 
-            switch (personnage3)
+
+            string personnage3;
+            bool personnage3Valide;
+            do
             {
-                case 0:
-                    personnage3Description = "Sorcière";
-                    break;
-                case 1:
-                    personnage3Description = "Robot";
-                    break;
-                case 2:
-                    personnage3Description = "Zombie";
-                    break;
-                default:
-                    personnage3Description = " erreur dans le switch du personnage";
-                    break;
-            }
+                personnage3Valide = true;
+                Console.WriteLine("Quel est le type du troisième personnage? (R)obot, (S)orcière ou (Z)ombie?");
+                personnage3 = Console.ReadLine() ?? string.Empty;
+                personnage3 = personnage3.ToUpper().Trim();
+                switch (personnage3)
+                {
+                    case "R":
+                    case "ROBOT":
+                        personnage3 = "Robot";
+                        break;
+                    case "Z":
+                    case "ZOMBIE":
+                        personnage3 = "Zombie";
+                        break;
+                    case "S":
+                    case "SORCIÈRE":
+                    case "SORCIERE":
+                        personnage3 = "Sorcière";
+                        break;
+                    default:
+                        Console.WriteLine(personnage3 + " n'est pas un personnage valide.");
+                        personnage3Valide = false;
+                        break;
+                }
+            } while (!personnage3Valide);
 
-            Console.WriteLine($"Les trois personnages pigés sont {personnage1Description}, {personnage2Description} et {personnage3Description}");
+            Console.WriteLine($"Vos trois personnages sont {personnage1}, {personnage2} et {personnage3}");
         }
     }
 }
