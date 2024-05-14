@@ -15,13 +15,13 @@ namespace PersonnageAuHasard
 
             // Solution date
             Console.WriteLine("Entrez un jour");
-            int.TryParse(Console.ReadLine() ?? string.Empty, out int jour);
+            bool dateValide = int.TryParse(Console.ReadLine() ?? string.Empty, out int jour);
             Console.WriteLine("Entrez un mois");
-            int.TryParse(Console.ReadLine() ?? string.Empty, out int mois);
+            dateValide &= int.TryParse(Console.ReadLine() ?? string.Empty, out int mois);
             Console.WriteLine("Entrez une annee");
-            int.TryParse(Console.ReadLine() ?? string.Empty, out int annee);
+            dateValide &= int.TryParse(Console.ReadLine() ?? string.Empty, out int annee);
 
-            bool dateValide = DateValide(jour, mois, annee);
+            dateValide &= DateValide(jour, mois, annee);
             Console.WriteLine($"{jour}/{mois}/{annee} ");
             if (dateValide)
                 Console.WriteLine("est valide.");
